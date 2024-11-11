@@ -29,7 +29,7 @@
                         </div>
                         
                         <div class="mb-6 col-md-12">
-                            <input type="file" wire:model="image" class="form-control">
+                            <input type="file" accept="image/jpeg,image/jpg,image/png" wire:model="image" class="form-control">
                             <div class="mt-3">
                                 @if ($image)
                                     <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid"
@@ -64,17 +64,19 @@
                         </div>
 
                         <div class="mb-6 col-md-12">
+                            <div class="mb-6">
+                                <label for="tags" class="form-label">Add Tags <small class="muted">(Enter a tag name and click enter.)</small></label>
+                                <input wire:model="newTag" wire:keydown.enter.prevent="addTag" type="text" class="form-control mt-2">
+                                @error('newTag')
+                                <span class="text-sm text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
                             @if ($tags !== [])
                                 @foreach ($tags as $tag)
                                     <p class="btn btn-sm btn-secondary">{{ $tag }} <button wire:click="removeTag('{{ $tag }}')" type="button"
                                             class="btn-close ms-2 btn-secondary"></button></p>
                                 @endforeach
                             @endif
-                            <label for="tags" class="form-label">Add Tags <small class="muted">(Enter a tag name and click enter.)</small></label>
-                            <input wire:model="newTag" wire:keydown.enter.prevent="addTag" type="text" class="form-control mt-2">
-                            @error('newTag')
-                                <span class="text-sm text-danger">{{ $message }}</span>
-                            @enderror
                         </div>
 
                         <button type="submit" class="btn btn-primary waves-effect waves-light">

@@ -17,11 +17,10 @@ use App\Livewire\Admin\Settings\Connections;
 use App\Livewire\Admin\Settings\Index as SettingsIndex;
 use App\Livewire\Admin\Settings\Security;
 use App\Livewire\Admin\Users\Index;
+use App\Livewire\Users\Home\Index as HomeIndex;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeIndex::class);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin',], function () {
 

@@ -23,6 +23,9 @@
                                 <span class="d-none d-sm-block">Reset</span>
                             </button>
                             <br>
+                            @error('image')
+                                <span class="text-sm text-danger">{{ $message }}</span>
+                            @enderror
                             <div wire:loading wire:target="image">
                                 <span class="text-info d-block">Uploading...</span>
                             </div>

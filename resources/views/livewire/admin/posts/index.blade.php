@@ -8,8 +8,8 @@
                         <div class="content-left">
                             <span class="text-heading">Total Posts</span>
                             <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">1,234</h4> <!-- Total number of posts -->
-                                <p class="text-success mb-0">(+12%)</p>
+                                <h4 class="mb-0 me-2">{{ $total_posts }}</h4> <!-- Total number of posts -->
+                                <p class="text-{{ $published_change > 10 ? "success" : "danger"}} mb-0">({{ $published_change >= 0 ? '+' : '' }}{{ number_format($published_change) }}%)</p> <!-- Published change percentage -->
                             </div>
                             <small class="mb-0">All Time</small>
                         </div>
@@ -22,6 +22,7 @@
                 </div>
             </div>
         </div>
+    
         <!-- Published Posts Card -->
         <div class="col-sm-6 col-xl-3">
             <div class="card">
@@ -30,42 +31,22 @@
                         <div class="content-left">
                             <span class="text-heading">Published Posts</span>
                             <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">987</h4> <!-- Number of published posts -->
-                                <p class="text-success mb-0">(+10%)</p>
+                                <h4 class="mb-0 me-2">{{ $published_posts }}</h4> <!-- Number of published posts -->
+                                <p class="text-{{ $published_change > 10 ? "success" : "danger"}} mb-0">({{ $published_change >= 0 ? '+' : '' }}{{ number_format($published_change) }}%)</p> <!-- Published change percentage -->
                             </div>
                             <small class="mb-0">Last week</small>
                         </div>
                         <div class="avatar">
                             <span class="avatar-initial rounded bg-label-success">
-                                <i class="ti ti-check-circle ti-26px"></i> <!-- Icon for published posts -->
+                                <i class="ti ti-checks"y></i> <!-- Icon for published posts -->
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Draft Posts Card -->
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-start justify-content-between">
-                        <div class="content-left">
-                            <span class="text-heading">Draft Posts</span>
-                            <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">123</h4> <!-- Number of draft posts -->
-                                <p class="text-danger mb-0">(-5%)</p>
-                            </div>
-                            <small class="mb-0">Last week</small>
-                        </div>
-                        <div class="avatar">
-                            <span class="avatar-initial rounded bg-label-warning">
-                                <i class="ti ti-file-off ti-26px"></i> <!-- Icon for draft posts -->
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    
         <!-- Pending Posts Card -->
         <div class="col-sm-6 col-xl-3">
             <div class="card">
@@ -74,8 +55,8 @@
                         <div class="content-left">
                             <span class="text-heading">Pending Posts</span>
                             <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">24</h4> <!-- Number of pending posts -->
-                                <p class="text-success mb-0">(+20%)</p>
+                                <h4 class="mb-0 me-2">{{ $pending_posts }}</h4> <!-- Number of pending posts -->
+                                <p class="text-{{ $pending_change > 10 ? "success" : "danger"}} mb-0">({{ $pending_change >= 0 ? '+' : '' }}{{ number_format($pending_change) }}%)</p> <!-- Pending change percentage -->
                             </div>
                             <small class="mb-0">Last week</small>
                         </div>
@@ -89,6 +70,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Posts List Table -->
     <div class="card">

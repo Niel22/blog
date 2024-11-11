@@ -128,6 +128,8 @@ class Account extends Component
 
                 $details->phone_no = $data['phone_no'];
 
+                
+
                 $user->update([
                     'phone_no' => $details->phone_no,
                     'address' => $details->address,
@@ -139,12 +141,19 @@ class Account extends Component
 
             session()->flash('success', 'Profile Updated');
         } else {
+            $data = $this->validate([
+                'phone_no' => ['required', 'string', 'unique:user_details,phone_no'],
+            ]);
+
+            $details->phone_no = $data['phone_no'];
+
             UserDetails::create([
                 'phone_no' => $details->phone_no,
                 'address' => $details->address,
                 'state' => $details->state,
                 'country' => $details->country,
-                'gender' => $details->gender
+                'gender' => $details->gender,
+                'user_id' => Auth::id()
             ]);
 
             session()->flash('success', 'Profile Updated');

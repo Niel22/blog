@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('state')->nullable();
             $table->string('country')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
         });
     }

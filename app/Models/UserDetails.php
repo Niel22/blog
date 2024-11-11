@@ -13,7 +13,10 @@ class UserDetails extends Model
         'address',
         'state',
         'country',
-        'gender'
+        'gender',
+        'facebook',
+        'instagram',
+        'twitter'
     ];
 
     public function user(){

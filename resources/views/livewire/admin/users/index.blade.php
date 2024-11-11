@@ -8,8 +8,7 @@
                         <div class="content-left">
                             <span class="text-heading">Session</span>
                             <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">21,459</h4>
-                                <p class="text-success mb-0">(+29%)</p>
+                                <h4 class="mb-0 me-2">{{ $sessions }}</h4>
                             </div>
                             <small class="mb-0">Total Users</small>
                         </div>
@@ -22,38 +21,17 @@
                 </div>
             </div>
         </div>
-        <!-- Paid Users Card -->
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-start justify-content-between">
-                        <div class="content-left">
-                            <span class="text-heading">Paid Users</span>
-                            <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">4,567</h4>
-                                <p class="text-success mb-0">(+18%)</p>
-                            </div>
-                            <small class="mb-0">Last week analytics</small>
-                        </div>
-                        <div class="avatar">
-                            <span class="avatar-initial rounded bg-label-danger">
-                                <i class="ti ti-user-plus ti-26px"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Active Users Card -->
         <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-start justify-content-between">
                         <div class="content-left">
-                            <span class="text-heading">Active Users</span>
+                            <span class="text-heading">Active Users (Registered Users)</span>
                             <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">19,860</h4>
-                                <p class="text-danger mb-0">(-14%)</p>
+                                <h4 class="mb-0 me-2">{{ $all_users }}</h4>
+                                <p class="text-{{ $activeUser_change > 10 ? "success" : "danger" }} mb-0">({{ $activeUser_change >= 0 ? "+" : "-"}}{{$activeUser_change}}%)</p>
                             </div>
                             <small class="mb-0">Last week analytics</small>
                         </div>
@@ -66,28 +44,7 @@
                 </div>
             </div>
         </div>
-        <!-- Pending Users Card -->
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-start justify-content-between">
-                        <div class="content-left">
-                            <span class="text-heading">Pending Users</span>
-                            <div class="d-flex align-items-center my-1">
-                                <h4 class="mb-0 me-2">237</h4>
-                                <p class="text-success mb-0">(+42%)</p>
-                            </div>
-                            <small class="mb-0">Last week analytics</small>
-                        </div>
-                        <div class="avatar">
-                            <span class="avatar-initial rounded bg-label-warning">
-                                <i class="ti ti-user-search ti-26px"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <!-- Users List Table -->

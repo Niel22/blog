@@ -5,8 +5,10 @@
         <li class="nav-item"><a class="nav-link {{ Route::is('admin.security') ? 'active' : "" }} waves-effect waves-light" href="{{ route('admin.security') }}"><i
                     class="ti-sm ti ti-lock me-1_5"></i>
                 Security</a></li>
+        @if(Auth::user()->userDetails != null)
         <li class="nav-item"><a class="nav-link {{ Route::is('admin.connection') ? 'active' : "" }} waves-effect waves-light"
                 href="{{ route('admin.connection') }}"><i class="ti-sm ti ti-link me-1_5"></i>
                 Connections</a></li>
+        @endif
     </ul>
 </div>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap');
+.jl_car_home .jelly_cus_h601 .jl_car_wrapper .jl_car_img_front {
+    padding-bottom: 120% !important;
+}
+.jl_car_home .row.jelly_cus_h601 .col-md-3 {
+    padding-right: 1px;
+    padding-left: 1px;
+}
+.jl_car_home .row.jelly_cus_h601 {
+    margin-right: -1px;
+    margin-left: -1px;
+}
+.jl_car_home .row.jelly_cus_h601 .slick-arrow {
+    display: none !important;
+}
+.jl_car_home .row.jelly_cus_h601 .col-md-3 {
+    padding-bottom: 30px;
+}
+.header_top_bar_wrapper .navigation_wrapper #jl_top_menu li a,
+.meta-category-small a,
+.item_slide_caption .post-meta.meta-main-img,
+.post-meta.meta-main-img,
+.post-meta-bot-in,
+.post-meta span,
+.single-post-meta-wrapper span,
+.comment time,
+.post_large_footer_meta,
+.blog_large_post_style .large_post_content .jelly_read_more_wrapper a,
+.love_post_view_header a,
+.header_date_display,
+.jl_continue_reading,
+.menu_post_feature .builder_cat_title_list_style li,
+.builder_cat_title_list_style li,
+.main_new_ticker_wrapper .post-date,
+.main_new_ticker_wrapper .news_ticker_title_style,
+.jl_rating_front .jl_rating_value,
+.pop_post_right_slider .headding_pop_post,
+.jl_main_right_number .jl_number_list,
+.jl_grid_more .jl_slider_readding,
+.page_builder_listpost.jelly_homepage_builder .jl_list_more a,
+.jl_s_slide_text_wrapper .banner-container .jl_ssider_more,
+.jl_post_meta .jl_author_img_w a,
+.jl_post_meta .post-date,
+.jl_large_builder.jelly_homepage_builder .jl_large_more,
+.jl_btn_load,
+.feature-image-link.image_post .jl_small_list_num,
+.social-count-plus .count,
+.social-count-plus .label,
+.jl_instagram .instagram-pics + .clear a,
+.single-post-meta-wrapper .jm-post-like,
+#commentform #submit,
+.wpcf7-form-control.wpcf7-submit,
+.comment-reply-link,
+.comment-edit-link {
+    font-family: Poppins !important;
+}
+#mainmenu > li > a,
+#content_nav .menu_moble_slide > li a,
+.header_layout_style3_custom .navigation_wrapper > ul > li > a,
+.header_magazine_full_screen .navigation_wrapper .jl_main_menu > li > a {
+    font-family: Poppins !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+}
+#menu-footer-menu li a,
+.footer-bottom .footer-left-copyright,
+.navigation_wrapper #mainmenu.jl_main_menu > li li > a {
+    font-family: Poppins !important;
+}
+#content_nav .menu_moble_slide > li a {
+    font-size: 13px !important;
+}
+.content_single_page p,
+.single_section_content .post_content,
+.single_section_content .post_content p {
+    font-size: 16px !important;
+}
+body,
+p,
+.date_post_large_display,
+#search_block_top #search_query_top,
+.tagcloud a,
+.format-quote a p.quote_source,
+.blog_large_post_style .large_post_content .jelly_read_more_wrapper a,
+.blog_grid_post_style .jelly_read_more_wrapper a,
+.blog_list_post_style .jelly_read_more_wrapper a,
+.pagination-more div a,
+.meta-category-small-builder a,
+.full-slider-wrapper .banner-carousel-item .banner-container .more_btn a,
+.single-item-slider .banner-carousel-item .banner-container .more_btn a {
+    font-family: Lato !important;
+    font-weight: 400 !important;
+}
+.single_section_content .post_content blockquote p {
+    font-size: 20px !important;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 14px !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.postnav #prepost,
+.postnav #nextpost,
+.bbp-forum-title,
+.single_post_arrow_content #prepost,
+.single_post_arrow_content #nextpost {
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+    letter-spacing: -0.03em !important;
+}
+.footer_carousel .meta-comment,
+.item_slide_caption h1 a,
+.tickerfloat,
+.box-1 .inside h3,
+.detailholder.medium h3,
+.feature-post-list .feature-post-title,
+.widget-title h2,
+.image-post-title,
+.grid.caption_header h3,
+ul.tabs li a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.carousel_title,
+.postnav a,
+.format-aside a p.aside_title,
+.date_post_large_display,
+.social-count-plus span,
+.sf-top-menu li a,
+.large_continue_reading span,
+.single_post_arrow_content #prepost,
+.single_post_arrow_content #nextpost,
+.cfs_from_wrapper .cfs_form_title,
+.comment-meta .comment-author-name,
+.jl_recent_post_number > li .jl_list_bg_num,
+.jl_recent_post_number .meta-category-small-text a,
+.jl_hsubt,
+.single_post_entry_content .post_subtitle_text,
+blockquote p {
+    font-family: Poppins !important;
+}
+.navigation_wrapper #mainmenu.jl_main_menu > li li > a {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.03em !important;
+    text-transform: uppercase !important;
+}
+.cat-item-2 span {
+    background: #ed1c1c !important;
+}
+.cat-item-3 span {
+    background: #0015ff !important;
+}
+.cat-item-4 span {
+    background: #d1783c !important;
+}
+.cat-item-5 span {
+    background: #6b34ba !important;
+}
+.cat-item-6 span {
+    background: #7fbc1e !important;
+}
+.cat-item-7 span {
+    background: #d66300 !important;
+}
+.cat-item-8 span {
+    background: #36c942 !important;
+}
+.cat-item-9 span {
+    background: #d800f9 !important;
+}

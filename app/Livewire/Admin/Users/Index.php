@@ -4,7 +4,9 @@ namespace App\Livewire\Admin\Users;
 
 use App\Models\Roles;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
@@ -85,16 +87,40 @@ class Index extends Component
         }
     }
 
+    private function calculatePercentageChange($current, $previous)
+    {
+        if ($previous == 0) {
+            return $current > 0 ? 100 : 0; 
+        }
+
+        return (($current - $previous) / $previous) * 100;
+    }
+
     #[Layout("components.layouts.admin")]
     public function render()
     {
         $this->authorize('view-users', User::class);
+        $lastWeek = Carbon::now()->subweek();
+
+        // session
+        $sessions = DB::table('sessions')->count();
+
+        $all_users = User::count();
+        $lastWeek_registered_users = User::where('created_at', '>=', $lastWeek)->count();
+        $activeUser_change = $this->calculatePercentageChange($all_users, $lastWeek_registered_users);
+
+
+
 
         return view('livewire.admin.users.index', [
             'users' => User::when($this->filterRole, function($q){
                 return $q->where('role', $this->filterRole);
             })->select(['id', 'name', 'email', 'role', 'created_at'])->get(),
             'roles' => Roles::select(['id', 'name'])->get(),
+            'sessions' => $sessions,
+            'all_users' => $all_users,
+            'activeUser_change' => $activeUser_change
+            
             
         ]);
     }

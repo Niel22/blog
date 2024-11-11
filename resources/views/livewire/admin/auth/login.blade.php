@@ -6,7 +6,7 @@
                     <div class="card-body">
                         <!-- Logo -->
                         <div class="app-brand justify-content-center mb-6">
-                            <a href="index.html" class="app-brand-link">
+                            <a href="{{route('admin.dashboard')}}" class="app-brand-link">
                                 <span class="app-brand-logo demo">
                                     <svg width="32" height="22" viewBox="0 0 32 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
