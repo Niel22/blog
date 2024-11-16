@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('content');
+            $table->integer('views')->default(0);
             $table->string('image');
             $table->json('tags')->nullable();
             $table->boolean('published')->default(0);

@@ -42,6 +42,7 @@ class Index extends Component
 
     public function publish($id)
     {
+        
         try {
             $post = Post::findOrFail($id);
 
@@ -55,7 +56,11 @@ class Index extends Component
                 'published_at' => $post->published === 0 ? Carbon::now() : null
             ]);
 
-            session()->flash('success', 'Post Published');
+            if($post->published === 0 ){
+                flash()->success('Post unplublished');
+            }else{
+                flash()->success('Post Published');
+            }
         } catch (\Exception $e) {
             session()->flash('error', $e->getMessage());
         }
