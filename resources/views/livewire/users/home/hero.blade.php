@@ -1,3 +1,6 @@
+<div>
+    {{-- The Master doesn't talk, he acts. --}}
+</div>
 <div class="jl_home_section jl_home_slider">
     <div class="container">
         <div class="row">

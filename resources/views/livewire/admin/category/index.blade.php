@@ -13,6 +13,7 @@
                 <thead class="border-top">
                     <tr>
                         <th>S/N</th>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Actions</th>
                     </tr>
@@ -22,6 +23,7 @@
                     @forelse($categories as $index => $category)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
+                        <td><img src="{{ asset('storage/'. $category->image) }}" alt="" class="img img-fluid" width="50px"></td>
                         <td><label class="badge" style="background-color: {{ $category->color }}">{{ $category->name }}</label></td>
                         <td>
                             @can('edit', \App\Models\Category::class)

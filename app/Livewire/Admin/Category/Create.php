@@ -2,15 +2,20 @@
 
 namespace App\Livewire\Admin\Category;
 
+use Livewire\Component;
 use App\Models\Category;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
-use Livewire\Component;
+use Illuminate\Support\Facades\Gate;
+use Intervention\Image\Laravel\Facades\Image;
+use Livewire\WithFileUploads;
 
 class Create extends Component
 {
-    public $name, $color;
+
+    use WithFileUploads;
+    
+    public $name, $color, $image;
     
     public function create(){
 
@@ -23,16 +28,40 @@ class Create extends Component
         
         $category = $this->validate([
             'name' => ['required', 'string'],
-            'color' => ['required', 'unique:categories,color']
+            'color' => ['required', 'unique:categories,color'],
+            'image' => ['required', 'mimes:png,jpg,jpeg']
         ]);
 
         $category['slug'] = Str::slug($category['name']);
 
-        Category::create($category);
+        $imageInstance = Image::read($category['image']->getRealPath());
 
-        session()->flash('success','Category created');
+        $minWidth = 1000;
+        $minHeight = 600;
 
-        $this->redirectRoute('admin.categories');
+        if (
+            $imageInstance->width() < $minWidth || $imageInstance->height() < $minHeight
+        ) {
+            
+            $this->reset('image');
+            $this->addError('image', 'The image must not be less than 1000px wide and 600 px high.');
+        }else{
+            $imageInstance->cover(1920, 982);
+            $filename = time() . '.' . $this->image->getClientOriginalExtension();
+            $path = 'uploads/category'; 
+            $imageInstance->save($category['image']->getRealPath());
+            
+            $category['image'] = $this->image->storeAs($path, $filename, 'public');
+
+           
+            Category::create($category);
+    
+            session()->flash('success','Category created');
+    
+            $this->redirectRoute('admin.categories');
+            
+        }
+
 
     }
 

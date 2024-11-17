@@ -28,7 +28,7 @@ class Index extends Component
         $this->authorize('view-categories', Category::class);
 
         return view('livewire.admin.category.index', [
-            'categories' => Category::select(['id', 'name', 'color', 'slug'])->get()
+            'categories' => Category::select(['id', 'name', 'color', 'slug', 'image'])->get()
         ]);
     }
 }

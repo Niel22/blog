@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table">
+            <table class="table text-nowrap">
                 <thead class="border-top">
                     <tr>
                         <th>#</th>
@@ -121,7 +121,7 @@
                     @forelse($posts as $index => $post)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $post->title }}</td>
+                        <td>{{ substr($post->title, 0, 20) }}...</td>
                         <td>{{ $post->user->name }}</td>
                         <td><label class="badge" style="background-color: {{ $post->category->color }}">{{ $post->category->name }}</label></td>
                         <td>{{ $post->published ? 'Published' : 'Pending' }}</td>

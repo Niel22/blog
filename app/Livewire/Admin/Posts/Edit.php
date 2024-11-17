@@ -61,7 +61,9 @@ class Edit extends Component
                 $this->addError('image', 'The image must not be less than 1000px wide and 600 px high.');
             } else {
                 try {
+                    
                     $oldPost = Post::where('slug', $this->slug)->firstOrFail();
+
                     
                     if(Gate::denies('update-posts', $oldPost)){
                         session()->flash('error', 'You are not authorized to update this post');
@@ -69,18 +71,18 @@ class Edit extends Component
                     }
                     
                     $imageInstance->cover(1920, 982);
+                    
                     $filename = time() . '.' . $this->newImage->getClientOriginalExtension();
                     $path = 'uploads/posts';
                     $imageInstance->save($post->newImage->getRealPath());
-
+                    
                     $post->newImage = $post->newImage->storeAs($path, $filename, 'public');
+                    
+                    
 
-
-                    if (file_exists(public_path('storage/' . $this->post->image))) {
-                        unlink(public_path('storage/' . $this->post->image));
+                    if (file_exists(public_path('storage/' . $oldPost->image))) {
+                        unlink(public_path('storage/' . $oldPost->image));
                     }
-
-
 
                     $oldPost->update([
                         'title' => $post->title,

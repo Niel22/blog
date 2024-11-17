@@ -54,6 +54,7 @@ class Create extends Component
             session()->flash('error', 'You are not authorized to create a post on this platform');
             $this->redirectRoute('admin.posts');
         }
+
         $post = (object) $this->validate([
             'title' => ['required', 'string'],
             'content' => ['required', 'min:200'],
@@ -75,6 +76,7 @@ class Create extends Component
             $this->reset('image');
             $this->addError('image', 'The image must not be less than 1000px wide and 600 px high.');
         }else{
+            
             $imageInstance->cover(1920, 982);
             $filename = time() . '.' . $this->image->getClientOriginalExtension();
             $path = 'uploads/posts'; 
