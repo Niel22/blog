@@ -1,110 +1,108 @@
-<div class="jl_home_section jl_home_mbg">
+<div class="jl_home_section">
     <div class="container">
+        <div class="homepage_builder_title">
+            <h2 class="builder_title_home_page">
+                Top Trending Posts
+            </h2>
+        </div>
         <div class="row">
-            <div class="col-md-12 jl_mid_main_3col">
-                <div class="jl_3col_wrapin">
-                    <div class="jl_main_with_right_post jelly_homepage_builder">
-                        <div class="homepage_builder_title">
-                            <h2 class="builder_title_home_page">
-                                Top Of the week
-                            </h2>
-                        </div>
-                        <div class="jl_main_post_style_padding">
-                            <div class="jl_main_post_style"> <span class="image_grid_header_absolute"
-                                    style="background-image: url('{{ asset('assets_front/img/uploads/2019/02/bruce-christianson-559084-unsplash-1920x982.jpg') }}')"></span>
-                                <a href="#" class="link_grid_header_absolute"
-                                    title="It’s always fun time and smile in the summer"></a>
-                                <div class="post-entry-content"> <span class="meta-category-small"><a
-                                            class="post-category-color-text" style="background:#0015ff"
-                                            href="#">Business</a></span>
-                                    <h3 class="image-post-title"><a href="#">
-                                            It’s always fun time and smile in the summer</a>
-                                    </h3>
-                                    <span class="jl_post_meta"><span class="jl_author_img_w"> <img
-                                                src="{{asset('assets_front/img/favicon.jpg')}}" width="30" height="30" alt="Anna Nikova"
-                                                class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                href="#" title="Posts by Anna Nikova" rel="author">Anna
-                                                Nikova</a></span><span class="post-date"><i
-                                                class="fa fa-clock-o"></i>Dec
-                                            24, 2016</span></span>
-                                </div>
+            <div class="col-md-8" id="content">
+                <div
+                    class="post_list_medium_widget jl_nonav_margin page_builder_listpost jelly_homepage_builder jl-post-block-725291">
+                    @foreach($trending as $post)
+                    <div class="blog_list_post_style">
+                        <div class="image-post-thumb featured-thumbnail home_page_builder_thumbnial">
+                            <div class="jl_img_container"> <span class="image_grid_header_absolute"
+                                    style="background-image: url('{{ asset('storage/' . $post->image) }}')"></span>
+                                <a href="#" class="link_grid_header_absolute"></a>
                             </div>
                         </div>
-                        <div class="jl_list_post_wrapper">
-                            <a href="#" class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                <img width="120" height="120"
-                                    src="{{ asset('assets_front/img/uploads/2019/02/almos-bechtold-582145-unsplash-120x120.jpg') }}"
-                                    class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                    alt="" />
-                                <div class="background_over_image"></div>
-                            </a>
-                            <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#d1783c"
-                                        href="#">Crazy</a></span>
-                                <h3 class="feature-post-title"><a href="#">
-                                        The great time for enjoy city view on mountain</a>
-                                </h3>
-                                <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
-                            </div>
-                        </div>
-                        <div class="jl_list_post_wrapper">
-                            <a href="#" class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                <img width="120" height="120"
-                                    src="{{ asset('assets_front/img/uploads/2019/02/chris-jarvis-794782-unsplash-120x120.jpg') }}"
-                                    class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                    alt="" />
-                                <div class="background_over_image"></div>
-                            </a>
-                            <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#ed1c1c"
-                                        href="#">Active</a></span>
-                                <h3 class="feature-post-title"><a href="#">
-                                        Your phone can take the best photo style</a>
-                                </h3>
-                                <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
-                            </div>
-                        </div>
-                        <div class="jl_list_post_wrapper">
-                            <a href="#" class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                <img width="120" height="120"
-                                    src="{{ asset('assets_front/img/uploads/2019/02/pierre-chatel-innocenti-593585-unsplash-120x120.jpg') }}"
-                                    class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                    alt="" />
-                                <div class="background_over_image"></div>
-                            </a>
-                            <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#6b34ba"
-                                        href="#">Gaming</a></span>
-                                <h3 class="feature-post-title"><a href="#">
-                                        Top 10 Best photo hunt of ice Rugby</a>
-                                </h3>
-                                <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
-                            </div>
-                        </div>
-                        <div class="jl_list_post_wrapper">
-                            <a href="#" class="jl_small_format feature-image-link image_post featured-thumbnail">
-                                <img width="120" height="120" src="{{asset('assets_front/img/favicon.jpg')}}"
-                                    class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                    alt="" />
-                                <div class="background_over_image"></div>
-                            </a>
-                            <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#d66300"
-                                        href="#">Science</a></span>
-                                <h3 class="feature-post-title"><a href="#">
-                                        It really great holiday and enjoy with the sea</a>
-                                </h3>
-                                <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24, 2016</span></span>
+                        <div class="post-entry-content"> <span class="meta-category-small"><a
+                                    class="post-category-color-text" style="background: {{ $post->category->color }}"
+                                    href="#">{{ $post->category->name }}</a></span> <span
+                                class="post-meta meta-main-img auto_image_with_date"><span class="post-date"><i
+                                        class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span><span class="meta-comment"><a
+                                        href="#"><i class="fa fa-comment"></i>0</a></span></span>
+                            <h3 class="image-post-title"><a href="#">
+                                    {{ $post->title }}</a>
+                            </h3>
+                            <div class="large_post_content">
+                                <p>{{ substr($post->content, 0, 150) }}....
+                                </p>
                             </div>
                         </div>
                     </div>
-                    
+                    @endforeach
                 </div>
             </div>
+            <div class="col-md-4" id="sidebar">
+                <div id="panel-4212-2-1-0" class="so-panel widget widget_socialcountplus panel-first-child"
+                    data-index="5">
+                    <div class="social-count-plus">
+                        <ul class="default">
+                            <li class="count-facebook">
+                                <a class="icon" href="https://www.facebook.com/" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">likes</span></span>
+                            </li>
+                            <li class="count-instagram">
+                                <a class="icon" href="https://instagram.com/" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">followers</span></span>
+                            </li>
+                            <li class="count-pinterest">
+                                <a class="icon" href="https://www.pinterest.com/" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">followers</span></span>
+                            </li>
+                            <li class="count-twitch">
+                                <a class="icon" href="http://www.twitch.tv//profile"
+                                    rel="nofollow noopener noreferrer" target="_blank"></a><span class="items"><span
+                                        class="count">20.5k</span><span class="label">followers</span></span>
+                            </li>
+                            <li class="count-twitter">
+                                <a class="icon" href="https://twitter.com/" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">followers</span></span>
+                            </li>
+                            <li class="count-vimeo">
+                                <a class="icon" href="https://vimeo.com/" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">followers</span></span>
+                            </li>
+                            <li class="count-youtube">
+                                <a class="icon" href="#" rel="nofollow noopener noreferrer"
+                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
+                                        class="label">subscribers</span></span>
+                            </li>
+                            <li class="count-linkedin">
+                                <a class="icon" href="https://www.linkedin.com/company/"
+                                    rel="nofollow noopener noreferrer" target="_blank"></a><span class="items"><span
+                                        class="count">20.5k</span><span class="label">followers</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <span class="jl_none_space"></span>
+                <div id="panel-4212-2-1-1"
+                    class="so-panel widget widget_disto_category_image_widget_register jellywp_cat_image"
+                    data-index="6">
+                    <div class="wrapper_category_image">
+                        <div class="category_image_wrapper_main">
+                            @foreach($categories as $category)
+                            <div class="category_image_bg_image"
+                                style="background-image: url('{{ asset('storage/' . $category->image) }}');">
+                                <a class="category_image_link" id="category_color_2" href="#"><span
+                                        class="jl_cm_overlay"><span class="jl_cm_name">{{ $category->name }}</span><span
+                                            class="jl_cm_count">{{$category->posts->count() }}</span></span></a>
+                                <div class="category_image_bg_overlay" style="background: {{ $category->color }};"></div>
+                            </div>
+                            @endforeach
+                        </div> <span class="jl_none_space"></span>
+                    </div>
+                </div> 
+                <span class="jl_none_space"></span>
+            </div>
         </div>
+
     </div>
 </div>

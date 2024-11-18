@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Post;
 use App\Models\Roles;
 use App\Policies\CategoryPolicy;
 use App\Policies\PermissionPolicy;
@@ -10,6 +11,7 @@ use App\Policies\PostPolicy;
 use App\Policies\RolePolicy;
 use App\Policies\UserPolicy;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        View::share('recent_posts', Post::orderBy('created_at', 'desc')->where('published', 1)->limit(2)->get());
+        View::share('categories', Category::withCount('posts')->orderBy('posts_count', 'desc')->limit(6)->get());
+
         Gate::define('view-roles', [RolePolicy::class,'viewAny']);
         Gate::define('view-permissions', [PermissionPolicy::class,'viewAny']);
 

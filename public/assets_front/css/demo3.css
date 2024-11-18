@@ -159,7 +159,7 @@ blockquote p {
     text-transform: uppercase !important;
 }
 .cat-item-2 span {
-    background: #ed1c1c !important;
+    background: #ed1c1c;
 }
 .cat-item-3 span {
     background: #0015ff !important;

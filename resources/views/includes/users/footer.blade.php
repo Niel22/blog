@@ -71,48 +71,28 @@
                       </div>
                       <div>
                          <ul class="feature-post-list recent-post-widget">
+                           @foreach($recent_posts as $post)
                             <li>
                                <a href="#"
                                   class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                  title="Round white dining table on brown hardwood">
+                                  title="{{ $post->title }}">
                                   <img width="120" height="120"
-                                     src="{{ asset('assets_front/img/uploads/2019/03/daniel-korpai-1296140-unsplash-120x120.jpg') }}"
+                                     src="{{ asset('storage/' . $post->image) }}"
                                      class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
                                      alt="" />
                                   <div class="background_over_image"></div>
                                </a>
                                <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#36c942"
-                                        href="#">Sports</a></span>
+                                        class="post-category-color-text" style="background: {{ $post->category->color }}"
+                                        href="#">{{ $post->category->name }}</a></span>
                                   <h3 class="feature-post-title"><a href="#">
-                                        Round white dining table on brown hardwood</a>
+                                        {{ $post->title }}</a>
                                   </h3>
                                   <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Mar 10,
-                                        2019</span></span>
+                                        class="post-date"><i class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
                                </div>
                             </li>
-                            <li>
-                               <a href="#"
-                                  class="jl_small_format feature-image-link image_post featured-thumbnail"
-                                  title="People are enjoy the job that they love">
-                                  <img width="120" height="120"
-                                     src="{{ asset('assets_front/img/uploads/2019/02/irina-iriser-654436-unsplash-120x120.jpg') }}"
-                                     class="attachment-disto_small_feature size-disto_small_feature wp-post-image"
-                                     alt="" />
-                                  <div class="background_over_image"></div>
-                               </a>
-                               <div class="item-details"> <span class="meta-category-small"><a
-                                        class="post-category-color-text" style="background:#0015ff"
-                                        href="#">Business</a></span>
-                                  <h3 class="feature-post-title"><a href="#">
-                                        People are enjoy the job that they love</a>
-                                  </h3>
-                                  <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>Dec 24,
-                                        2016</span></span>
-                               </div>
-                            </li>
+                            @endforeach
                          </ul>
                       </div> <span class="jl_none_space"></span>
                    </div>
@@ -124,24 +104,11 @@
                       <h2>Categories</h2>
                    </div>
                    <ul>
-                      <li class="cat-item cat-item-2"><a href="#"
-                            title="Sample category description goes here">Active</a> <span>11</span>
+                     @foreach($categories as $category)
+                      <li class="cat-item"><a href="#"
+                            title="Sample category description goes here">{{ $category->name }}</a> <span style="background: {{ $category->color }};">{{ $category->posts->count() }}</span>
                       </li>
-                      <li class="cat-item cat-item-3"><a href="#"
-                            title="Sample category description goes here">Business</a> <span>10</span>
-                      </li>
-                      <li class="cat-item cat-item-4"><a href="#"
-                            title="Sample category description goes here">Crazy</a> <span>5</span>
-                      </li>
-                      <li class="cat-item cat-item-5"><a href="#"
-                            title="Sample category description goes here">Gaming</a> <span>10</span>
-                      </li>
-                      <li class="cat-item cat-item-6"><a href="#"
-                            title="Sample category description goes here">Health</a> <span>6</span>
-                      </li>
-                      <li class="cat-item cat-item-7"><a href="#"
-                            title="Sample category description goes here">Science</a> <span>4</span>
-                      </li>
+                      @endforeach
                    </ul>
                 </div>
              </div>
@@ -151,8 +118,8 @@
     <div class="footer-bottom enable_footer_copyright_dark">
        <div class="container">
           <div class="row bottom_footer_menu_text">
-             <div class="col-md-6 footer-left-copyright">© Copyright 2019 Jellywp. All Rights Reserved Powered
-                by Jellywp</div>
+             <div class="col-md-6 footer-left-copyright">© Copyright {{ \Carbon\Carbon::now()->format('Y') }} NIEL. All Rights Reserved Powered
+                by NIEL</div>
              <div class="col-md-6 footer-menu-bottom">
                 <ul id="menu-footer-menu" class="menu-footer">
                    <li class="menu-item menu-item-10"><a href="#">About Us</a>
