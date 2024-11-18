@@ -1,6 +1,3 @@
-<div>
-    {{-- The Master doesn't talk, he acts. --}}
-</div>
 <div class="jl_home_section jl_home_slider">
     <div class="container">
         <div class="row">
@@ -26,7 +23,7 @@
                                                                             class="post-category-color-text"
                                                                             style="background:{{ $post->category->color }}"
                                                                             href="#">{{ $post->category->name }}</a></span>
-                                                                    <h5><a href="#">{{ $post->title }}</a>
+                                                                    <h5><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">{{ $post->title }}</a>
                                                                     </h5>
                                                                     <span class="jl_post_meta"><span
                                                                             class="jl_author_img_w">

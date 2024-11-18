@@ -17,6 +17,7 @@
         "php-flasher/flasher-toastr-laravel": "^2.1"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.14",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
@@ -30,7 +31,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files" : [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

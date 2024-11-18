@@ -29,8 +29,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('recent_posts', Post::orderBy('created_at', 'desc')->where('published', 1)->limit(2)->get());
-        View::share('categories', Category::withCount('posts')->orderBy('posts_count', 'desc')->limit(6)->get());
+        View::share('global_recent_posts', Post::orderBy('created_at', 'desc')->where('published', 1)->limit(2)->get());
+        View::share('global_categories', Category::withCount('posts')->orderBy('posts_count', 'desc')->limit(6)->get());
+
+        View::share('formatNumber', function ($number) {
+            if ($number >= 1000000) {
+                return round($number / 1000000, 1) . 'm';
+            } elseif ($number >= 1000) {
+                return round($number / 1000, 1) . 'k';
+            }
+            return $number;
+        });
+
 
         Gate::define('view-roles', [RolePolicy::class,'viewAny']);
         Gate::define('view-permissions', [PermissionPolicy::class,'viewAny']);

@@ -36,7 +36,7 @@
                         <div class="logo_small_wrapper_table">
                            <div class="logo_small_wrapper">
                               <!-- begin logo -->
-                              <a class="logo_link" href="index.html">
+                              <a class="logo_link" href="{{ route('home') }}">
                                  <img src="{{ asset('assets_front/img/logo.png')}}" alt="Just another WordPress site" />
                               </a>
                               <!-- end logo -->
@@ -45,7 +45,7 @@
                         <!-- main menu -->
                         <div class="menu-primary-container navigation_wrapper">
                            <ul id="mainmenu" class="jl_main_menu">
-                              <li class="menu-item"> <a href="#">Home<span
+                              <li class="menu-item"> <a href="{{ route('home') }}">Home<span
                                        class="border-menu"></span></a>
                               </li>
                               <li class="menu-item"> <a href="#">Features</a>

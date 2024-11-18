@@ -71,7 +71,7 @@
                       </div>
                       <div>
                          <ul class="feature-post-list recent-post-widget">
-                           @foreach($recent_posts as $post)
+                           @foreach($global_recent_posts as $post)
                             <li>
                                <a href="#"
                                   class="jl_small_format feature-image-link image_post featured-thumbnail"
@@ -104,7 +104,7 @@
                       <h2>Categories</h2>
                    </div>
                    <ul>
-                     @foreach($categories as $category)
+                     @foreach($global_categories as $category)
                       <li class="cat-item"><a href="#"
                             title="Sample category description goes here">{{ $category->name }}</a> <span style="background: {{ $category->color }};">{{ $category->posts->count() }}</span>
                       </li>

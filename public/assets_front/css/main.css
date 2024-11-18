@@ -118,6 +118,18 @@
 .single_section_content .post_content p {
 	font-size: 16px !important;
 }
+
+.post_content p::first-letter {
+    font-size: 4em;  
+    font-weight: bold;
+	float: left;
+	line-height: 1;
+	margin-top: 5px;
+	padding-right: 3px;
+    color: #000;
+    vertical-align: bottom; 
+    margin-right: 5px;
+}
 body,
 p,
 .date_post_large_display,
