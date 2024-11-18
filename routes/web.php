@@ -17,6 +17,7 @@ use App\Livewire\Admin\Settings\Connections;
 use App\Livewire\Admin\Settings\Index as SettingsIndex;
 use App\Livewire\Admin\Settings\Security;
 use App\Livewire\Admin\Users\Index;
+use App\Livewire\Users\Category\Index as UsersCategoryIndex;
 use App\Livewire\Users\Home\Index as HomeIndex;
 use App\Livewire\Users\Post\Details;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,7 @@ Route::group([], function(){
 
     Route::get('/', HomeIndex::class)->name('home');
     Route::get('{category_slug}/{post_slug}', Details::class)->name('post.details');
+    Route::get('{category_slug}', UsersCategoryIndex::class)->name('category');
 });
 
 // {{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}

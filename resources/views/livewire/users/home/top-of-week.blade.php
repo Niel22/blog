@@ -26,7 +26,7 @@
                                                                     <div class="jl_grid5_itemin">
                                                                         <span class="image_grid_header_absolute"
                                                                             style="background-image: url('{{ asset('storage/' . $top_of_week->image) }}')"></span>
-                                                                        <a href="#" class="link_grid_header_absolute"
+                                                                        <a href="{{ route('post.details', ['category_slug' => $top_of_week->category->slug, 'post_slug' => $top_of_week->slug]) }}" class="link_grid_header_absolute"
                                                                             title="{{ $top_of_week->title }}"></a>
                                                                         <span class="meta-category-small"><a
                                                                                 class="post-category-color-text"
@@ -34,7 +34,7 @@
                                                                                 href="#">{{ $top_of_week->category->name }}</a></span>
                                                                         <div
                                                                             class="wrap_box_style_main image-post-title">
-                                                                            <h3 class="image-post-title"><a href="#">
+                                                                            <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $top_of_week->category->slug, 'post_slug' => $top_of_week->slug]) }}">
                                                                                     {{ $top_of_week->title }}</a></h3>
                                                                             <span class="jl_post_meta"><span
                                                                                     class="jl_author_img_w"><img
@@ -55,7 +55,7 @@
                                                                     <div class="jl_grid5_itemin">
                                                                         <span class="image_grid_header_absolute"
                                                                             style="background-image: url('{{ asset('storage/'. $post->image) }}')"></span>
-                                                                        <a href="#" class="link_grid_header_absolute"
+                                                                        <a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}" class="link_grid_header_absolute"
                                                                             title="{{ $post->title }}"></a>
                                                                         <span class="meta-category-small"><a
                                                                                 class="post-category-color-text"
@@ -63,7 +63,7 @@
                                                                                 href="#">{{ $post->category->name }}</a></span>
                                                                         <div
                                                                             class="wrap_box_style_main image-post-title">
-                                                                            <h3 class="image-post-title"><a href="#">
+                                                                            <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                                                                     {{ $post->title }}</a></h3>
                                                                             <span class="jl_post_meta"><span
                                                                                     class="jl_author_img_w"><img

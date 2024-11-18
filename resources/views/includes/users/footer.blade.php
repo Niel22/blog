@@ -73,7 +73,7 @@
                          <ul class="feature-post-list recent-post-widget">
                            @foreach($global_recent_posts as $post)
                             <li>
-                               <a href="#"
+                               <a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}"
                                   class="jl_small_format feature-image-link image_post featured-thumbnail"
                                   title="{{ $post->title }}">
                                   <img width="120" height="120"
@@ -85,7 +85,7 @@
                                <div class="item-details"> <span class="meta-category-small"><a
                                         class="post-category-color-text" style="background: {{ $post->category->color }}"
                                         href="#">{{ $post->category->name }}</a></span>
-                                  <h3 class="feature-post-title"><a href="#">
+                                  <h3 class="feature-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                         {{ $post->title }}</a>
                                   </h3>
                                   <span class="post-meta meta-main-img auto_image_with_date"> <span

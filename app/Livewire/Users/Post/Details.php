@@ -12,6 +12,7 @@ class Details extends Component
 
 
     public function mount($category_slug, $post_slug){
+        
         $this->category = Category::where('slug', $category_slug)->firstOrFail();
         $this->post = Post::where('slug', $post_slug)->firstOrFail();
         $this->posts = Post::where('category_id', $this->category->id)->whereNot('id', $this->post->id)->orderBy('created_at', 'desc')->limit(4)->get();

@@ -8,7 +8,7 @@
                         class="jelly_homepage_builder jl_nonav_margin homepage_builder_3grid_post jl_fontsize22 jl_cus_grid3 colstyle1">
                         <div class="homepage_builder_title">
                             <h2>
-                                Today&#039;s News
+                                Trending Today
                             </h2>
                             <span class="jl_hsubt"></span>
                         </div>
@@ -18,7 +18,7 @@
                                 <div class="col-md-4 blog_grid_post_style  jl_row_1">
                                     <div class="jl_grid_box_wrapper">
                                         <div class="image-post-thumb">
-                                            <a href="#" class="link_image featured-thumbnail"
+                                            <a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}" class="link_image featured-thumbnail"
                                                 title="This is a great photo and nice for shooting">
                                                 <img width="780" height="450"
                                                     src="{{ asset('storage/' . $post->image) }}"
@@ -30,7 +30,7 @@
                                                     href="#">{{ $post->category->name }}</a></span>
                                         </div>
                                         <div class="post-entry-content">
-                                            <h3 class="image-post-title"><a href="#">
+                                            <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                                     {{ $post->title }}</a>
                                             </h3>
                                             <span class="jl_post_meta"><span class="jl_author_img_w"> <img

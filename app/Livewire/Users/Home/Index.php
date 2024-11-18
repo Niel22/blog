@@ -22,7 +22,7 @@ class Index extends Component
 
         return view('livewire.users.home.index', [
             'hero_posts' => Post::where('published', 1)->orderBy('created_at', 'desc')->limit(4)->get(),
-            'recent_posts' => Post::where('published', 1)->whereDate('created_at', $today)->orderBy('created_at', 'desc')->get(),
+            'recent_posts' => Post::where('published', 1)->whereDate('created_at', $today)->orderBy('created_at', 'desc')->orderBy('views', 'desc')->get(),
             'top_of_week' => $top_of_week,
             'tops_of_week' => $tops_of_week,
             'categories' => Category::withCount('posts')->orderBy('posts_count', 'desc')->limit(4)->get(),

@@ -14,7 +14,7 @@
                         <div class="image-post-thumb featured-thumbnail home_page_builder_thumbnial">
                             <div class="jl_img_container"> <span class="image_grid_header_absolute"
                                     style="background-image: url('{{ asset('storage/' . $post->image) }}')"></span>
-                                <a href="#" class="link_grid_header_absolute"></a>
+                                <a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}" class="link_grid_header_absolute"></a>
                             </div>
                         </div>
                         <div class="post-entry-content"> <span class="meta-category-small"><a
@@ -23,7 +23,7 @@
                                 class="post-meta meta-main-img auto_image_with_date"><span class="post-date"><i
                                         class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span><span class="meta-comment"><a
                                         href="#"><i class="fa fa-comment"></i>0</a></span></span>
-                            <h3 class="image-post-title"><a href="#">
+                            <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                     {{ $post->title }}</a>
                             </h3>
                             <div class="large_post_content">
