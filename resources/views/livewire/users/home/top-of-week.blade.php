@@ -31,7 +31,7 @@
                                                                         <span class="meta-category-small"><a
                                                                                 class="post-category-color-text"
                                                                                 style="background: {{ $top_of_week->category->color }}"
-                                                                                href="#">{{ $top_of_week->category->name }}</a></span>
+                                                                                href="{{ route('category', ['category_slug' => $top_of_week->category->slug]) }}">{{ $top_of_week->category->name }}</a></span>
                                                                         <div
                                                                             class="wrap_box_style_main image-post-title">
                                                                             <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $top_of_week->category->slug, 'post_slug' => $top_of_week->slug]) }}">
@@ -45,7 +45,7 @@
                                                                                         title="Posts by {{ $top_of_week->user->name }}"
                                                                                         rel="author"> {{ $top_of_week->user->name }} </a></span><span
                                                                                     class="post-date"><i
-                                                                                        class="fa fa-clock-o"></i>{{ $top_of_week->created_at->format('M d, Y') }}</span></span>
+                                                                                        class="fa fa-clock-o"></i>{{ $top_of_week->created_at->diffForHumans() }}</span></span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -74,7 +74,7 @@
                                                                                         title="Posts by {{ $post->user->name }}"
                                                                                         rel="author">{{ $post->user->name }}</a></span><span
                                                                                     class="post-date"><i
-                                                                                        class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
+                                                                                        class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span></span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

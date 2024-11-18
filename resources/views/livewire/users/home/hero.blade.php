@@ -34,7 +34,7 @@
                                                                                 title="Posts by {{ $post->user->name }}"
                                                                                 rel="author">{{ $post->user->name }}</a></span><span
                                                                             class="post-date"><i
-                                                                                class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
+                                                                                class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span></span>
                                                                 </div>
                                                             </div>
                                                         </div>

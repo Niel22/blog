@@ -27,7 +27,7 @@
                                                 <div class="background_over_image"></div>
                                             </a> <span class="meta-category-small"><a
                                                     class="post-category-color-text" style="background: {{ $post->category->color}}"
-                                                    href="#">{{ $post->category->name }}</a></span>
+                                                    href="{{ route('category', ['category_slug' => $post->category->slug]) }}">{{ $post->category->name }}</a></span>
                                         </div>
                                         <div class="post-entry-content">
                                             <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
@@ -38,7 +38,7 @@
                                                         alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
                                                         href="#" title="Posts by Anna Nikova" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
-                                                        class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
+                                                        class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span></span>
                                             <div class="content_post_grid">
                                                 <p>
                                                     {{ substr($post->content, 0, 110) }}...

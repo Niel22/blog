@@ -24,7 +24,7 @@
                 <div class="col-md-8 grid-sidebar" id="content">
                     <div class="jl_wrapper_cat">
                         <div id="content_masonry" class="pagination_infinite_style_cat ">
-                            @foreach($category->posts as $post)
+                            @foreach($posts as $post)
                             <div class="box jl_grid_layout1 blog_grid_post_style post-2970 post type-post status-publish format-gallery has-post-thumbnail hentry category-business tag-inspiration tag-morning tag-racing post_format-post-format-gallery aos-init aos-animate"
                                 data-aos="fade-up">
                                 <div class="post_grid_content_wrapper">
@@ -57,7 +57,14 @@
                             </div>
                             @endforeach
                         </div>
-                        <nav class="jellywp_pagination"></nav>
+                        @if($category->posts->count() > $perPage)
+                        <div class="jl-loadmore-btn-w">
+                            <button wire:click="loadMore()" class="jl_btn_load">
+                                <span wire:loading.remove wire:target="loadMore">Load more</span>
+                                <x-spinner wire:loading wire:target="loadMore" />
+                            </button>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 

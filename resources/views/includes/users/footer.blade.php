@@ -89,7 +89,7 @@
                                         {{ $post->title }}</a>
                                   </h3>
                                   <span class="post-meta meta-main-img auto_image_with_date"> <span
-                                        class="post-date"><i class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
+                                        class="post-date"><i class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span></span>
                                </div>
                             </li>
                             @endforeach
@@ -105,7 +105,7 @@
                    </div>
                    <ul>
                      @foreach($global_categories as $category)
-                      <li class="cat-item"><a href="#"
+                      <li class="cat-item"><a href="{{ route('category', ['category_slug' => $category->slug]) }}"
                             title="Sample category description goes here">{{ $category->name }}</a> <span style="background: {{ $category->color }};">{{ $category->posts->count() }}</span>
                       </li>
                       @endforeach

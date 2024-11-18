@@ -20,7 +20,7 @@
                                                 src="{{ asset('storage/'.$post->user->userDetails->image) }}" width="50" height="50" alt="{{ $post->user->name }}"
                                                 class="avatar avatar-50 wp-user-avatar wp-user-avatar-50 alignnone photo"><a
                                                 href="#" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span></span><span class="post-date updated"><i
-                                            class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span><span class="meta-comment"><i
+                                            class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }} at {{ $post->created_at->format('h:i A') }}</span><span class="meta-comment"><i
                                             class="fa fa-comment"></i><a href="#">0 Comment</a></span><a href="#"
                                         class="jm-post-like liked" data-post_id="2963" title="Unlike"><i
                                             class="fa fa-heart"></i>0</a><span class="view_options"><i
@@ -132,7 +132,7 @@
                                         <div class="jl_related_feature_items">
                                             <div class="jl_related_feature_items_in">
                                                 <div class="image-post-thumb">
-                                                    <a href="#" class="link_image featured-thumbnail"
+                                                    <a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}" class="link_image featured-thumbnail"
                                                         title="It really great holiday and enjoy with the sea">
                                                         <img width="780" height="450"
                                                             src="{{ asset('storage/' . $post->image) }}"
@@ -142,7 +142,7 @@
                                                     </a>
                                                 </div>
                                                 <span class="meta-category-small"><a class="post-category-color-text"
-                                                        style="background: {{ $post->category->color }}" href="#">{{ $post->category->name }}</a></span>
+                                                        style="background: {{ $post->category->color }}" href="{{ route('category', ['category_slug' => $post->category->slug]) }}">{{ $post->category->name }}</a></span>
                                                 <div class="post-entry-content">
                                                     <h3 class="jl-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                                             {{ $post->title }}</a></h3>
@@ -150,7 +150,7 @@
                                                                 src="{{ asset('storage/' . $post->user->userDetails->image) }}" width="30" height="30"
                                                                 alt="{{ $post->user->name }}"
                                                                 class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo"><a
-                                                                href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
+                                                                href="#" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
                                                                 class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
                                                 </div>
 

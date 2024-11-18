@@ -19,9 +19,9 @@
                         </div>
                         <div class="post-entry-content"> <span class="meta-category-small"><a
                                     class="post-category-color-text" style="background: {{ $post->category->color }}"
-                                    href="#">{{ $post->category->name }}</a></span> <span
+                                    href="{{ route('category', ['category_slug' => $post->category->slug]) }}">{{ $post->category->name }}</a></span> <span
                                 class="post-meta meta-main-img auto_image_with_date"><span class="post-date"><i
-                                        class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span><span class="meta-comment"><a
+                                        class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span><span class="meta-comment"><a
                                         href="#"><i class="fa fa-comment"></i>0</a></span></span>
                             <h3 class="image-post-title"><a href="{{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}">
                                     {{ $post->title }}</a>
