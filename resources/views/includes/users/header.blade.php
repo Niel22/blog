@@ -48,12 +48,11 @@
                               <li class="menu-item"> <a href="{{ route('home') }}">Home<span
                                        class="border-menu"></span></a>
                               </li>
-                              <li class="menu-item"> <a href="#">Features</a>
+                              @foreach($global_categories as $category)
+                              <li class="menu-item"> <a href="{{ route('category', ['category_slug' => $category->slug]) }}">{{ $category->name }}</a>
                               </li>
-                              <li class="menu-item"><a href="gaming.html">Gaming<span class="border-menu"></span></a>
-                              </li>
-                              <li class="menu-item"><a href="active.html">Active<span class="border-menu"></span></a>
-                              </li>
+                              @endforeach
+                              
                               
                            </ul>
                         </div>

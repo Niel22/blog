@@ -6,13 +6,10 @@
        <ul id="mobile_menu_slide" class="menu_moble_slide">
           <li class="menu-item"> <a href="#">Home<span class="border-menu"></span></a>
           </li>
-          <li class="menu-item"> <a href="#">Features<span
-                   class="jl_menu_lb jl_lb_blue">New</span><span class="border-menu"></span></a>
-          </li>
-          <li class="menu-item"><a href="gaming.html">Gaming<span class="border-menu"></span></a>
-          </li>
-          <li class="menu-item"><a href="active.html">Active<span class="border-menu"></span></a>
-          </li>
+         @foreach($global_categories as $category)
+         <li class="menu-item"> <a href="{{ route('category', ['category_slug' => $category->slug]) }}">{{ $category->name }}</a>
+         </li>
+         @endforeach
           
        </ul>
        <span class="jl_none_space"></span>

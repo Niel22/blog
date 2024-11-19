@@ -14,7 +14,8 @@
         "laravel/tinker": "^2.9",
         "livewire/flux": "^1.0",
         "livewire/livewire": "^3.5",
-        "php-flasher/flasher-toastr-laravel": "^2.1"
+        "php-flasher/flasher-toastr-laravel": "^2.1",
+        "predis/predis": "^2.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14",
