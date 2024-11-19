@@ -37,7 +37,7 @@
                                                         src="{{asset('storage/' . $post->user->userDetails->image)}}" width="30" height="30"
                                                         alt="Anna Nikova"
                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                        href="#" title="Posts by Anna Nikova" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
+                                                        href="{{ route('author', ['author' => encrypt($post->user->id)]) }}" title="Posts by Anna Nikova" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
                                                         class="fa fa-clock-o"></i>{{ $post->created_at->diffForHumans() }}</span></span>
                                             <div class="content_post_grid">
                                                 <p>

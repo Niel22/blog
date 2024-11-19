@@ -17,6 +17,7 @@ use App\Livewire\Admin\Settings\Connections;
 use App\Livewire\Admin\Settings\Index as SettingsIndex;
 use App\Livewire\Admin\Settings\Security;
 use App\Livewire\Admin\Users\Index;
+use App\Livewire\Users\Author\Index as AuthorIndex;
 use App\Livewire\Users\Category\Index as UsersCategoryIndex;
 use App\Livewire\Users\Home\Index as HomeIndex;
 use App\Livewire\Users\Post\Details;
@@ -58,8 +59,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
 Route::group([], function(){
 
     Route::get('/', HomeIndex::class)->name('home');
+    
+    // Author
+    Route::get('author/{author}', AuthorIndex::class)->name('author');
+    
+    // Post Details
     Route::get('{category_slug}/{post_slug}', Details::class)->name('post.details');
+
+    // Category
     Route::get('{category_slug}', UsersCategoryIndex::class)->name('category');
+
+
+
 });
 
 // {{ route('post.details', ['category_slug' => $post->category->slug, 'post_slug' => $post->slug]) }}

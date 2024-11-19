@@ -41,7 +41,7 @@
                                                                                         src="{{ asset('storage/' . $top_of_week->user->userDetails->image) }}" width="30"
                                                                                         height="30" alt="{{ $top_of_week->user->name }}"
                                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo"><a
-                                                                                        href="#"
+                                                                                        href="{{ route('author', ['author' => encrypt($top_of_week->user->id)]) }}"
                                                                                         title="Posts by {{ $top_of_week->user->name }}"
                                                                                         rel="author"> {{ $top_of_week->user->name }} </a></span><span
                                                                                     class="post-date"><i
@@ -70,7 +70,7 @@
                                                                                         src="{{ asset('storage/' . $post->user->userDetails->image) }}" width="30"
                                                                                         height="30" alt="{{ $post->user->name }}"
                                                                                         class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo"><a
-                                                                                        href="#"
+                                                                                        href="{{ route('author', ['author' => encrypt($post->user->id)]) }}"
                                                                                         title="Posts by {{ $post->user->name }}"
                                                                                         rel="author">{{ $post->user->name }}</a></span><span
                                                                                     class="post-date"><i

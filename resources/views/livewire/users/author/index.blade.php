@@ -1,15 +1,13 @@
 <div>
     <div class="main_title_wrapper category_title_section jl_cat_img_bg">
-        <div class="category_image_bg_image"
-            style="background-image: url('{{ asset('storage/' . $category->image) }}');">
-        </div>
+        
         <div class="category_image_bg_ov"></div>
         <div class="jl_cat_title_wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 main_title_col">
                         <div class="jl_cat_mid_title">
-                            <h3 class="categories-title title">{{ $category->name }}</h3>
+                            <h3 class="categories-title title">{{ $author->name }}</h3>
                             <p></p>
                         </div>
                     </div>
@@ -48,7 +46,7 @@
                                                             src="{{ asset('storage/' .$post->user->userDetails->image) }}" width="30" height="30"
                                                             alt="{{ $post->user->name }}"
                                                             class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo"><a
-                                                            href="{{ route('author', ['author' => encrypt($post->user->id)]) }}" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
+                                                            href="#" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
                                                             class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
                                             </div>
                                         </div>
@@ -57,7 +55,7 @@
                             </div>
                             @endforeach
                         </div>
-                        @if($category->posts->count() > $perPage)
+                        @if($author->posts->count() > $perPage)
                         <div class="jl-loadmore-btn-w">
                             <button wire:click="loadMore()" class="jl_btn_load">
                                 <span wire:loading.remove wire:target="loadMore">Load more</span>

@@ -19,7 +19,7 @@
                                 <span class="single-post-meta-wrapper"><span class="post-author"><span><img
                                                 src="{{ asset('storage/'.$post->user->userDetails->image) }}" width="50" height="50" alt="{{ $post->user->name }}"
                                                 class="avatar avatar-50 wp-user-avatar wp-user-avatar-50 alignnone photo"><a
-                                                href="#" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span></span><span class="post-date updated"><i
+                                                href="{{ route('author', ['author' => encrypt($post->user->id)]) }}" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span></span><span class="post-date updated"><i
                                             class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }} at {{ $post->created_at->format('h:i A') }}</span><span class="meta-comment"><i
                                             class="fa fa-comment"></i><a href="#">0 Comment</a></span><a href="#"
                                         class="jm-post-like liked" data-post_id="2963" title="Unlike"><i
@@ -150,7 +150,7 @@
                                                                 src="{{ asset('storage/' . $post->user->userDetails->image) }}" width="30" height="30"
                                                                 alt="{{ $post->user->name }}"
                                                                 class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo"><a
-                                                                href="#" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
+                                                                href="{{ route('author', ['author' => encrypt($post->user->id)]) }}" title="Posts by {{ $post->user->name }}" rel="author">{{ $post->user->name }}</a></span><span class="post-date"><i
                                                                 class="fa fa-clock-o"></i>{{ $post->created_at->format('M d, Y') }}</span></span>
                                                 </div>
 

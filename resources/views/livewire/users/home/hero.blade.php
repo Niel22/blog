@@ -30,7 +30,7 @@
                                                                             <img src="{{asset('storage/'. $post->user->userDetails->image)}}" width="30"
                                                                                 height="30" alt="Anna Nikova"
                                                                                 class="avatar avatar-30 wp-user-avatar wp-user-avatar-30 alignnone photo" /><a
-                                                                                href="#"
+                                                                                href="{{ route('author', ['author' => encrypt($post->user->id)]) }}"
                                                                                 title="Posts by {{ $post->user->name }}"
                                                                                 rel="author">{{ $post->user->name }}</a></span><span
                                                                             class="post-date"><i
