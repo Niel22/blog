@@ -37,6 +37,7 @@ class Edit extends Component
             'newImage' => ['nullable', 'mimes:png,jpg,jpeg']
         ]);
 
+
         if ($newCategory->newImage != null) {
 
 
@@ -96,7 +97,6 @@ class Edit extends Component
                     'name'=> $newCategory->name,
                     'color'=> $newCategory->color,
                     'slug' => Str::slug($newCategory->name),
-                    'image' => $newCategory->newImage
                 ]);
 
 
