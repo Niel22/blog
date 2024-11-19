@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('browser')->nullable();
             $table->string('device')->nullable();
-            $table->string('location')->nullable();
             $table->timestamp('last_login')->useCurrent();
             $table->timestamps();
         });

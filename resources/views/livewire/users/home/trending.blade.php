@@ -35,73 +35,8 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-md-4" id="sidebar">
-                <div id="panel-4212-2-1-0" class="so-panel widget widget_socialcountplus panel-first-child"
-                    data-index="5">
-                    <div class="social-count-plus">
-                        <ul class="default">
-                            <li class="count-facebook">
-                                <a class="icon" href="https://www.facebook.com/" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">likes</span></span>
-                            </li>
-                            <li class="count-instagram">
-                                <a class="icon" href="https://instagram.com/" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">followers</span></span>
-                            </li>
-                            <li class="count-pinterest">
-                                <a class="icon" href="https://www.pinterest.com/" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">followers</span></span>
-                            </li>
-                            <li class="count-twitch">
-                                <a class="icon" href="http://www.twitch.tv//profile"
-                                    rel="nofollow noopener noreferrer" target="_blank"></a><span class="items"><span
-                                        class="count">20.5k</span><span class="label">followers</span></span>
-                            </li>
-                            <li class="count-twitter">
-                                <a class="icon" href="https://twitter.com/" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">followers</span></span>
-                            </li>
-                            <li class="count-vimeo">
-                                <a class="icon" href="https://vimeo.com/" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">followers</span></span>
-                            </li>
-                            <li class="count-youtube">
-                                <a class="icon" href="#" rel="nofollow noopener noreferrer"
-                                    target="_blank"></a><span class="items"><span class="count">20.5k</span><span
-                                        class="label">subscribers</span></span>
-                            </li>
-                            <li class="count-linkedin">
-                                <a class="icon" href="https://www.linkedin.com/company/"
-                                    rel="nofollow noopener noreferrer" target="_blank"></a><span class="items"><span
-                                        class="count">20.5k</span><span class="label">followers</span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <span class="jl_none_space"></span>
-                <div id="panel-4212-2-1-1"
-                    class="so-panel widget widget_disto_category_image_widget_register jellywp_cat_image"
-                    data-index="6">
-                    <div class="wrapper_category_image">
-                        <div class="category_image_wrapper_main">
-                            @foreach($categories as $category)
-                            <div class="category_image_bg_image"
-                                style="background-image: url('{{ asset('storage/' . $category->image) }}');">
-                                <a class="category_image_link" id="category_color_2" href="#"><span
-                                        class="jl_cm_overlay"><span class="jl_cm_name">{{ $category->name }}</span><span
-                                            class="jl_cm_count">{{$category->posts->count() }}</span></span></a>
-                                <div class="category_image_bg_overlay" style="background: {{ $category->color }};"></div>
-                            </div>
-                            @endforeach
-                        </div> <span class="jl_none_space"></span>
-                    </div>
-                </div> 
-                <span class="jl_none_space"></span>
-            </div>
+            
+            @include('includes.users.sticky-sidebar')
         </div>
 
     </div>

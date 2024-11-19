@@ -27,24 +27,11 @@ class LogUserLogin
         $agent = new Agent();
 
         $ip = request()->ip();
-        $location = null;
-        $response = Http::get("https://ipinfo.io/{$ip}/json");
-        if ($response->successful()) {
-            $locationData = $response->json();
-
-            if (isset($locationData['city']) && !empty($locationData['city'])) {
-                $location = "{$locationData['city']}, {$locationData['country']}";
-            } else {
-                // Handle the case where 'city' is not set or empty
-                $location = "City not available";
-            }
-        }
 
         UserLogin::create([
             'user_id' => $event->user->id,
             'browser' => $agent->browser() . " on " . $agent->platform(),
             'device' => $agent->device(),
-            'location' => $location,
             'last_login' => now()
         ]);
 

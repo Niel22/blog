@@ -70,7 +70,6 @@
                             <tr>
                                 <th class="text-truncate">Browser</th>
                                 <th class="text-truncate">Device</th>
-                                <th class="text-truncate">Location</th>
                                 <th class="text-truncate">Last Login</th>
                             </tr>
                         </thead>
@@ -92,7 +91,6 @@
                                       {{ $activity->browser }}
                                     </td>
                                     <td class="text-truncate">{{ strtolower($activity->device) == 'webkit' ? ucwords($browserParts[2]) : $activity->device }}</td>
-                                    <td class="text-truncate">{{ $activity->location }}</td>
                                     <td class="text-truncate">
                                         {{ \Carbon\Carbon::parse($activity->last_login)->format('D M d, Y h:i A') }}
                                     </td>
