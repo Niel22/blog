@@ -151,6 +151,9 @@
                     <!-- Repeat as needed -->
                 </tbody>
             </table>
+            <div class="container pt-3">
+            {{ $posts->links() }}
+            </div>
         </div>
     </div>
 </div>

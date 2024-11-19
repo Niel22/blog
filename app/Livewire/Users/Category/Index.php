@@ -29,7 +29,7 @@ class Index extends Component
     
     public function render()
     {
-        $this->posts = Post::where('category_id', $this->category->id)->orderBy('created_at', 'desc')->limit($this->perPage)->get();
+        $this->posts = Post::where('published', 1)->where('category_id', $this->category->id)->orderBy('created_at', 'desc')->limit($this->perPage)->get();
 
         return view('livewire.users.category.index');
     }

@@ -16,4 +16,8 @@ class Category extends Model
     public function posts(){
         return $this->hasMany(Post::class)->where('published', 1);
     }
+
+    public function all_posts(){
+        return $this->hasMany(Post::class);
+    }
 }

@@ -37,7 +37,7 @@ class Index extends Component
 
     public function render()
     {
-        $this->posts = Post::where('user_id', $this->author->id)->orderBy('created_at', 'desc')->limit($this->perPage)->get();
+        $this->posts = Post::where('published', 1)->where('user_id', $this->author->id)->orderBy('created_at', 'desc')->limit($this->perPage)->get();
         return view('livewire.users.author.index');
     }
 }

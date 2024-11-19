@@ -15,6 +15,7 @@
                         <th>S/N</th>
                         <th>Image</th>
                         <th>Name</th>
+                        <th>Posts</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -25,6 +26,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td><img src="{{ asset('storage/'. $category->image) }}" alt="" class="img img-fluid" width="50px"></td>
                         <td><label class="badge" style="background-color: {{ $category->color }}">{{ $category->name }}</label></td>
+                        <td>{{ $category->all_posts->count() }}</td>
                         <td>
                             @can('edit', \App\Models\Category::class)
                             <a href="{{ route('admin.categories.edit', $category->slug) }}" class="btn btn-sm btn-primary">Edit</a>
@@ -44,8 +46,6 @@
                                 <span>Unauthorized</span>
                             </button>
                             @endcan
-
-
                         </td>
                     </tr>
                     @empty

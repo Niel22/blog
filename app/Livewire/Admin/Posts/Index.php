@@ -11,9 +11,12 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\Livewire;
+use Livewire\WithoutUrlPagination;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
+    use WithPagination, WithoutUrlPagination;
 
     public $status, $category, $date;
 
@@ -110,7 +113,7 @@ class Index extends Component
                 ->when($this->date, function ($q) {
                     return $q->whereDate('created_at', Carbon::parse($this->date)->format('Y-m-d'));
                 })
-                ->orderBy('created_at', 'desc')->get(),
+                ->orderBy('created_at', 'desc')->paginate(5),
             'categories' => Category::select(['id', 'name'])->get(),
             'total_posts' => $totalPosts,
             'published_posts' => $publishedPosts,
