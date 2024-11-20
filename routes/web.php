@@ -21,6 +21,7 @@ use App\Livewire\Users\Author\Index as AuthorIndex;
 use App\Livewire\Users\Category\Index as UsersCategoryIndex;
 use App\Livewire\Users\Home\Index as HomeIndex;
 use App\Livewire\Users\Post\Details;
+use App\Livewire\Users\Search\Index as SearchIndex;
 use Illuminate\Support\Facades\Route;
 
 
@@ -68,6 +69,9 @@ Route::group([], function(){
 
     // Category
     Route::get('{category_slug}', UsersCategoryIndex::class)->name('category');
+
+    // Search
+    Route::get('search', SearchIndex::class)->name('search');
 
 
 

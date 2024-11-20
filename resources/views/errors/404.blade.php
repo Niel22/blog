@@ -35,11 +35,7 @@
             <div class="menu_mobile_large_close"><span class="jl_close_wapper search_form_menu_personal_click"><span
                      class="jl_close_1"></span><span class="jl_close_2"></span></span>
             </div>
-            <form method="get" class="searchform_theme" action="#">
-               <input type="text" placeholder="Search..." value="" name="s" class="search_btn" />
-               <button type="submit" class="button"><i class="fa fa-search"></i>
-               </button>
-            </form>
+            <livewire:users.search.widget />
          </div>
          <div class="mobile_menu_overlay"></div>
          <!-- content section -->

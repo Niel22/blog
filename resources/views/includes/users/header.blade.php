@@ -52,16 +52,13 @@
                               <li class="menu-item"> <a href="{{ route('category', ['category_slug' => $category->slug]) }}">{{ $category->name }}</a>
                               </li>
                               @endforeach
-                              
-                              
                            </ul>
                         </div>
                         <!-- end main menu -->
                         <div class="search_header_menu">
                            <div class="menu_mobile_icons"><i class="fa fa-bars"></i>
                            </div>
-                           <div class="search_header_wrapper search_form_menu_personal_click"><i
-                                 class="fa fa-search"></i>
+                           <div class="search_header_wrapper search_form_menu_personal_click"><i class="fa fa-search"></i>
                            </div>
                            <div class="menu_mobile_share_wrapper">
                               <ul class="social_icon_header_top">
