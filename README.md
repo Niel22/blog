@@ -12,11 +12,107 @@ This Blog Platform is a web application that allows users to create, read, updat
 - Comment on posts.  
 - Search for posts by keywords.  
 
-### Admin Features:  
-- Manage users (CRUD).  
-- Approve or reject blog posts.  
-- Moderate comments.  
-- Manage categories and tags.  
+### Dashboard Roles and Features:
+
+1. **Admin Role Features:**
+   - **User Management:**
+     - Can manage users (Create, Read, Update, Delete users).
+     - Assign or remove roles to/from users.
+     - Can create, update, and delete user roles.
+     - Can create, update, and delete permissions.
+     - Assign permissions to different roles.
+   
+   - **Content Management:**
+     - Can create and manage categories.
+     - Can create, edit, and delete blog posts.
+     - Approve or reject blog posts.
+     - Can manage all content on the site.
+   
+   - **Settings & Profile:**
+     - Can access the settings page.
+     - Can edit profile details.
+     - Can change password.
+     - Can delete their account.
+     - Can connect and manage social media accounts (Twitter, Facebook, Instagram).
+   
+   - **Performance Metrics:**
+     - View metrics on user registrations.
+     - View performance of posts (e.g., how many posts have been made).
+
+2. **Editor Role Features:**
+   - **Content Management:**
+     - Can view the list of users and categories.
+     - Can create posts and publish posts submitted by authors.
+     - Posts created by editors are published automatically.
+     - Can edit and delete posts (if allowed).
+   
+   - **Settings & Profile:**
+     - Can access settings page.
+     - Can edit profile details.
+     - Can change password.
+     - Can delete their account.
+     - Can connect and manage social media accounts (Twitter, Facebook, Instagram).
+   
+   - **Performance Metrics:**
+     - View metrics on posts published by the editor and authors.
+     - View the number of users and posts created.
+
+3. **Author Role Features:**
+   - **Content Management:**
+     - Can create, edit, and delete posts.
+     - Posts must be reviewed and published by an editor or admin before being visible on the blog page.
+   
+   - **Settings & Profile:**
+     - Can access settings page.
+     - Can edit profile details.
+     - Can change password.
+     - Can delete their account.
+     - Can connect and manage social media accounts (Twitter, Facebook, Instagram).
+   
+   - **Performance Metrics:**
+     - View metrics on how many posts the author has created and how they are performing (once published).
+
+4. **Subscriber Role Features:**
+   - **Profile Management:**
+     - Can edit their profile details.
+     - Can change their password.
+     - Can delete their account.
+     - Can connect and manage social media accounts (Twitter, Facebook, Instagram).
+
+   - **Performance Metrics:**
+     - Can view the content they have interacted with (e.g., liked posts, comments).
+
+### General Features Available to All Roles:
+   - **Profile and Settings:**
+     - Ability to edit profile details (name, bio, avatar, etc.).
+     - Ability to change passwords.
+     - Account deletion option.
+     - Integration with social media accounts (Twitter, Facebook, Instagram).
+   
+   - **Filter and Pagination:**
+     - Filter content (posts and users) by categories, tags, or other custom filters.
+     - Pagination available on post and user pages for easier navigation.
+
+   - **Performance Metrics:**
+     - View user growth metrics (how many users have joined over a period).
+     - View post performance metrics (number of posts made, views, interactions).
+
+   - **Security:**
+     - Multi-role permissions and restrictions for controlling access to specific content and functionality.
+     - Role-based access control (RBAC) for different actions on posts and user management.
+   
+   - **Audit Logs:**
+     - Track actions performed by users, including login attempts, profile updates, and content creation.
+     - Admin can view audit logs of actions taken by editors, authors, and subscribers.
+   
+   - **Post & User Management Filters:**
+     - Filter posts by status (draft, pending, published).
+     - Filter users by roles, registration date, activity, etc.
+
+   - **Social Media Integration:**
+     - Users can connect their accounts to social media platforms such as Twitter, Facebook, Instagram.
+     - Admin can view and manage social media integrations.
+ 
 
 ### Additional Features:  
 - Responsive design for mobile and desktop.  
