@@ -19,7 +19,7 @@
                         <ul class="list-unstyled mb-0">
                           <li class="d-flex mb-4 align-items-center">
                             <p class="mb-0 fw-medium me-2 website-analytics-text-bg">28%</p>
-                            <p class="mb-0">Sessions</p>
+                            <p class="mb-0">Active Sessions</p>
                           </li>
                           <li class="d-flex align-items-center">
                             <p class="mb-0 fw-medium me-2 website-analytics-text-bg">1.2k</p>

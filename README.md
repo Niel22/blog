@@ -48,10 +48,10 @@ This Blog Platform is a web application that allows users to create, read, updat
 
 ## Screenshots  
 ### Admin Dashboard  
-![Admin Dashboard](https://dummylink.com/admin-dashboard.png)
+![Admin Dashboard](/admin_post_page.png)
 
 ### Blog Interface  
-![Blog Interface](https://dummylink.com/blog-interface.png)
+![Blog Interface](/interface.png)
 
 ## Contribution  
 1. Fork the repository.  
@@ -65,4 +65,3 @@ This project is licensed under the MIT License.
 - **Vuexy Bootstrap Template** for the **Admin Dashboard**: [Vuexy Admin Template](https://themeforest.net/item/vuexy-bootstrap-admin-dashboard-template/23328599)  
 - **Distro Template** for the **Blog Interface**: [Distro Template](https://themeforest.net/item/distro-bootstrap-blog-website-template/26884235)
 
-EOF

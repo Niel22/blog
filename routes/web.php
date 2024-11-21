@@ -57,7 +57,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
     
 });
 
-Route::group([], function(){
+Route::group(['middleware' => 'trackPageView'], function(){
 
     Route::get('/', HomeIndex::class)->name('home');
     
