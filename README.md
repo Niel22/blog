@@ -5,12 +5,32 @@ cat <<EOF > README.md
 This Blog Platform is a web application that allows users to create, read, update, and delete blog posts. It features user authentication, a rich text editor, and a clean, responsive design. The platform is built using **HTML**, **CSS**, **JavaScript**, **Bootstrap**, **PHP (Laravel)**, and **MySQL**.
 
 ## Features  
-### User Features:  
-- User registration and login.  
-- Create, edit, and delete blog posts.  
-- View all posts or filter posts by category or tag.  
-- Comment on posts.  
-- Search for posts by keywords.  
+### User Features:
+- **Homepage:**
+  - Hero section showing recent posts based on their trending status.
+  - Today's news section.
+  - Top news of the week section.
+  - Top trending news of all time section.
+
+- **Post Details Page:**
+  - Sidebar displaying:
+    - All categories.
+    - Recent posts.
+    - Tags of the viewed post.
+    - Related posts.
+    - Next and previous posts.
+  - Comment section allowing users to comment with their name and email address.
+
+- **Categories:**
+  - View categories and see posts under each category.
+  
+- **Post Search:**
+  - Ability to search for posts by keywords.
+
+- **Tags:**
+  - Clickable tags that lead to posts related to that tag.
+
+
 
 ### Dashboard Roles and Features:
 
