@@ -45,9 +45,6 @@ This Blog Platform is a web application that allows users to create, read, updat
 ![](https://img.shields.io/badge/MySQL-000000?style=flat&logo=mysql&logoColor=4479A1)  
 - **MySQL**  
 
-### Authentication:  
-![](https://img.shields.io/badge/Laravel%20Sanctum-000000?style=flat&logo=laravel&logoColor=FF2D20)  
-- **Laravel Sanctum**  
 
 ## Screenshots  
 ### Admin Dashboard  
