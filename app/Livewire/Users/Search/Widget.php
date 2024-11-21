@@ -9,7 +9,7 @@ class Widget extends Component
     public $query;
 
     public function search(){
-        $this->redirectRoute('search');
+        $this->redirectRoute('search', ['query' => $this->query]);
     }
 
     public function render()

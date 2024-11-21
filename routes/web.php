@@ -64,14 +64,15 @@ Route::group([], function(){
     // Author
     Route::get('author/{author}', AuthorIndex::class)->name('author');
     
+    // Search
+    Route::get('/s/{query}', SearchIndex::class)->name('search');
+
     // Post Details
     Route::get('{category_slug}/{post_slug}', Details::class)->name('post.details');
 
     // Category
     Route::get('{category_slug}', UsersCategoryIndex::class)->name('category');
 
-    // Search
-    Route::get('search', SearchIndex::class)->name('search');
 
 
 

@@ -50,7 +50,7 @@
                                     <div class="tag-cat">
                                         <ul class="single_post_tag_layout">
                                             @foreach(json_decode($post->tags) as $tag)
-                                                <li><a href="#" rel="tag">{{ $tag }}</a></li>
+                                                <li><a href="{{ route('search', ['query' => $tag]) }}" rel="tag">{{ $tag }}</a></li>
                                             @endforeach
                                         </ul>
                                     </div>
